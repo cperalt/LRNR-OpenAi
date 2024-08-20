@@ -41,7 +41,7 @@ const QuizPage = () => {
         const question = quiz.questions[currentQuestionIndex].question;
         const userAnswer = userAnswers[currentQuestionIndex];
 
-        const response = await fetch("/evaluate-answer", {
+        const response = await fetch("https://lrnr-quiz-backend.vercel.app/evaluate-answer", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const QuizPage = () => {
 
     try {
       if (quiz) {
-        const response = await fetch("/submit-quiz", {
+        const response = await fetch("https://lrnr-quiz-backend.vercel.app/submit-quiz", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
